@@ -34,8 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src=${myMeal.strMealThumb}>
         <div class="details">
             <h2>${myMeal.strMeal}</h2>
-            <h2>${myMeal.strArea}</h2>
-            <h3>${myMeal.strCategory}</h3>
+            <h2 style="font-weight: 400;">${myMeal.strArea}</h2>
         </div>
         <div id="ingredients">
         </div>
@@ -43,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <button id="hide-recipe">X</button>
             <pre id="insructions">${myMeal.strInstructions}</pre>
         </div>
+        <button id="show-recipe"></button>
         `;
+
+
     })
 }) 
