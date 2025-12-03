@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i in myMeal) {
             let ingredient = "";
             let measure = "";
-            if(i.startsWith('stringredient') && myMeal[i]){
+            if(i.startsWith('strIngredient') && myMeal[i]){
                 ingredient = myMeal[i];
                 measure = myMeal[`strMeasure` + count];
-                count++;
+                count += 1;
                 ingredients.push(`${measure} ${ingredient }`);
             };
         }
@@ -36,15 +36,26 @@ document.addEventListener("DOMContentLoaded", () => {
             <h2>${myMeal.strMeal}</h2>
             <h2 style="font-weight: 400;">${myMeal.strArea}</h2>
         </div>
-        <div id="ingredients">
+        <div id="ingredientsContainer">
         </div>
         <div id="recipe">
             <button id="hide-recipe">X</button>
             <pre id="insructions">${myMeal.strInstructions}</pre>
         </div>
-        <button id="show-recipe"></button>
+        <button id="show-recipe">View Recipe</button>
         `;
 
+        let ingredient = document.getElementById("ingredientsContainer");
+        let parent = document.createElement("ul");
+        let recipe = document.getElementById("recipe");
+        let hideRecipe = document.getElementById("hide-recipe");
+        let showRecipe = document.getElementById("show-recipe");
 
+        ingredients.forEach((i) => {
+            let child = document.createElement("li");
+            child.innerText = i;
+            parent.appendChild(child);
+            ingredient.appendChild(parent);
+        });
     })
 }) 

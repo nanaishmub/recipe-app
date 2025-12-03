@@ -66,6 +66,18 @@ img {
     font-weight: 600;
 }
 
+#show-recipe {
+    font-size: 1em;
+    font-weight: 400;
+    position: relative;
+    padding: 0.7em 0.6em;
+    border: none;
+    background-color: rgb(235, 136, 56);
+    left: 75%;
+    border-radius: 0.3em;
+    top: 1.5em;
+}
+
 .details h3{
     font-size: 0.75em;
     font-weight: 200;
@@ -97,4 +109,8 @@ img {
     background-color: rgba(235, 136, 56, 0.842);
     top: 1.2em;
     left: 90%;
+}
+
+ul{
+    display: block;
 }
