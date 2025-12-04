@@ -45,6 +45,12 @@ body{
     font-weight: 800;
 }
 
+h3{
+    margin-top: 1.8em;
+    text-align: center;
+    color: #202030;
+}
+
 img {
     display: block;
     width: 50%;
@@ -112,5 +118,15 @@ img {
 }
 
 ul{
-    display: block;
+    display: grid;
+    font-size: 1em;
+    grid-template-columns: auto auto;
+    gap: 0.8em 1.1em;
+    padding: 1.2em 0 0 1.2em;
+}
+
+@media screen and (max-width: 500px) {
+    .container{
+        font-size: 14px;
+    }
 }
