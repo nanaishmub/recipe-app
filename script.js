@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let searchBtn = document.getElementById('search-btn');
     let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
-    searchBtn.addEventListener("click", () => {
-        let userInp = document.getElementById("search-inp").value;
+    let searchRecipe = () => {    
+        let userInp = document.getElementById("search-inp").value;    
         if (userInp.length == 0){
             result.innerHTML = `<h3>Input Field Cannot Be Empty</h3>`;
         } else {
@@ -71,7 +71,18 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch(() => {
                 result.innerHTML = `<h3>Invalid Input</h3>`;
-            });
+            })
         }      
-    })
-}) 
+    }
+
+    const userInp = document.getElementById("search-inp");
+
+    userInp.addEventListener("keyup", (e) => {
+        if(e.keyCode === 13){
+           searchRecipe() ;
+        }
+    });
+    
+    searchBtn.addEventListener("click", searchRecipe)
+
+})

@@ -45,6 +45,11 @@ body{
     font-weight: 800;
 }
 
+#search-btn:hover{
+    background-color: rgba(252, 194, 147, 0.445);
+    border-radius: 0.9em;
+}
+
 h3{
     margin-top: 1.8em;
     text-align: center;
